@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewData["Title"] = "SignIn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@model Udemy.AdvertisementApp.Core.Dtos.AppUserDtos.AppUserLogInDto
+
+
+
+
+
+
+
+<div class="mt-5">
+   
+    <div class="row" class="text" >
+
+        <div class="col-md-4 mx-auto mt-5">
+            <form asp-action="SignIn" asp-controller="Account" method="post" class="p-4 w-75 mx-auto">
+                <h1 class="text-center">Giriş Yap</h1>
+                <div class="text-danger" asp-validation-summary="All"></div>
+                <div class="mb-3">
+                    <label>Kullanıcı Adınız :</label>
+                    <input asp-for="@Model.Username" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label>Şifreniz :</label>
+                    <input type="password" asp-for="@Model.Password" class="form-control" />
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" asp-for="@Model.RememberMe" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Beni Hatırla
+                    </label>
+                </div>
+
+                <div class="mb-3 text-end">
+                    <button type="submit" class="btn btn-primary">Giriş Yap</button>
+                </div>
+
+               
+            </form>
+        </div>
+    </div>
+ 
+</div>

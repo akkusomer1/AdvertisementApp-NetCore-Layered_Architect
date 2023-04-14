@@ -1,0 +1,68 @@
+﻿@using Udemy.AdvertisementApp.Core.Enums;
+
+@{
+    ViewData["Title"] = "Send";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model AdvertisementAppUserCreateVm
+
+<div class=" row mt-5">
+    <div class="col-md-7 container-fluid align-items-center">
+        
+        <form asp-action="Send" asp-controller="Advertisement" enctype="multipart/form-data">
+
+            <div class="text-danger" asp-validation-summary="ModelOnly" ></div>
+            <h1>İlana Başvur</h1> 
+            <input type="hidden" asp-for="@Model.AppUserId" />
+            <input type="hidden" asp-for="@Model.AdvertisementId" />
+      
+
+            @if (ViewBag.GenderId ==(int)GenderType.Erkek)
+            {
+                 <div class="col mb-4">
+                <div class="form-outline">
+                    <select asp-for="@Model.MilitaryStatusId" asp-items="@ViewBag.MilitaryStatus" class="form-select">
+                       
+                    </select>
+                    <label class="form-label" >Askerlik Durumu</label>
+                </div>
+
+                <label class="form-label text-danger" >*Askerlik durumu tecilliyse  tecil tarihini giriniz.</label>
+                  <div class="form-outline mb-4" @*style="visibility:hidden"*@ id="EndDate">
+                <input type="date" asp-for="@Model.EndDate" class="form-control" />
+                <label>Tecil Tarihi</label>
+            </div
+            </div>
+            }
+            else
+            {
+                 <input type="hidden" asp-for="@Model.MilitaryStatusId" value="@((int)MilitaryStatusType.Muaf)" />
+            }
+           
+
+            <div class="form-outline mb-4">
+                <input type="number" class="form-control" asp-for="@Model.WorkExperience" />
+                <label class="form-label" for="form3Example3">İş Deneyiminiz (Yıl olarak)</label>
+            </div>
+
+            <div class="form-outline mb-4">
+                <input type="file" class="form-control" asp-for="@Model.CvFile" />
+                <label class="form-label" for="form3Example4">Cv Dosyanızı  Yükleyiniz. </label>
+               <br />
+            </div>
+             
+           
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-block mb-4">Kaydet</button>
+         
+        </form>
+    </div>
+</div>
+
+
+@section scripts{
+    <script>
+        //Sctipt kodlarımı bu kısma yazacağım.
+    </script>
+}

@@ -1,0 +1,39 @@
+-Her sabah 2 saat tekrar 
+-1 saatlik video proje geliştirme 
+-Gencay Yıldız EF Core 1 video
+-kalan vakitler ıdentityServer.
+
+
+
+
+İzlenecekler
+-------------
+1-IdentityServer---Daha  sonra devam edilecek. X
+2-Yavuz Selim Kahraman 
+3-Uzaktan egitim jwt
+4-Blog Projesi
+5-Bilinmesi gereken kütüphaneler
+6-Git ve GitHub
+7-İngilizce
+-----------------------------
+
+6-Caching
+7-OData
+8-RabbitMq
+9-SignalR
+10-
+11-MicroServices
+12-Docker veya Azure
+13-Tech Body ve Gencay Yıldız..
+14-flutter yada kotlin
+--------------------------------------------------------------
+Tekrar-Artık bir yerde dur sıkı bir şekilde tekrara başla..
+
+Tekrar
+-------
+1-Web Api
+2-Identity Api
+3-Jwt
+4-YSK
+5-Diğer tüm konular
+6-FrontEnd
